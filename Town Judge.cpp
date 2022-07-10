@@ -1,4 +1,4 @@
-Intuition :-
+/* Intuition :-
 The town judge trusts no one => the number of outgoing edges of town judge will be 0.
 Everyone trusts the town judge => the number of incoming edges of the town judge will be n-1.
 
@@ -8,7 +8,7 @@ Everyone trusts the town judge => the number of incoming edges of the town judge
 
 
 Time Complexity = O(n) + O(n) , for storing the number incoming & outgoing edges + traversing trough the vertices to find the town judge
-Space Complexity = O(n) + O(n) , for storing the number incoming & outgoing edges
+Space Complexity = O(n) + O(n) , for storing the number incoming & outgoing edges */
 
 
 class Solution {
