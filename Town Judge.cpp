@@ -15,19 +15,18 @@ class Solution {
 public:
     int findJudge(int n, vector<vector<int>>& trust) 
     {
-
-        unordered_map<int,int>out;//it stores the number of outgoing edges for a vertex
-        unordered_map<int,int>in; // it stores the number of incoming edges for a vertex
+        unordered_map<int,int> outgoing;
+        unordered_map<int,int> incoming;
         
-        for(auto index : trust)
-        {
-            out[index[0]] ++; //outgoing edges
-            in[index[1]]++;//incoming edges
-        }
+           for(auto i: trust)
+           {
+               outgoing[i[0]]++;
+               incoming[i[1]]++;
+           }
         
-        for(int i =1;i<=n;i++)
+        for(int i=1; i<=n; i++)
         {
-            if(out[i] == 0 && in[i] == n-1)
+            if(outgoing[i] ==0 && incoming[i] ==n-1)
                 return i;
         }
         return -1;
